@@ -1,2 +1,33 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<h3>K-Carシフトとは</h3>
+<p>K-Carシフトとは、"キッチンカー"のオーナー&従業員のための勤怠管理アプリです。開店時間や場所が変わる、というキッチンカー固有の事情に合わせたシステムになっています。</p>
+
+<h3>ログイン・新規登録</h3>
+
+<div class="login-signup"> 
+  <div class="owner-section">
+    
+    <div class="section-icon owner-section-icon">
+      <i class="fa-solid fa-user"></i>
+      <h5>オーナーの方</h5>
+    </div>
+
+    <div class="btns btns-owner">
+      <%= link_to 'ログイン', new_owner_session_path, class: 'btn-login btn-owner-login' %>
+      <%= link_to '新規登録はこちら', new_owner_registration_path, class: 'btn-signup btn-owner-signup' %>
+    </div>
+
+  </div>
+
+  <div class="employee-section">
+
+    <div class="section-icon employee-section-icon">
+      <i class="fa-solid fa-users fa-lg"></i>
+      <h5>従業員の方</h5>
+    </div>
+
+    <div class="btns btns-employee">
+      <%= link_to 'ログイン', new_owner_session_path, class: 'btn-login btn-employee-login' %>
+    </div>
+  </div>
+
+</div>
