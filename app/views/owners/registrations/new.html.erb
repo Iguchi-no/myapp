@@ -22,14 +22,10 @@
     <%= f.text_field :shop_name, autocomplete: "shop_name" %>
   </div>
 
-  <%
-=begin%>
- <div class="field">
+  <div class="field">
     <%= f.label :email, "メールアドレス" %><br />
     <%= f.email_field :email, autocomplete: "email" %>
   </div> 
-<%
-=end%>
 
   <div class="field">
     <%= f.label :password, "パスワード" %>
@@ -47,7 +43,7 @@
   <div class="actions">
     <%= f.submit "新規登録" %>
   </div>
-  
+
 <% end %>
 
 <%= render "owners/shared/links" %>
