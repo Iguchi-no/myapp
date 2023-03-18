@@ -6,7 +6,11 @@
 <h2>新規登録</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "owners/shared/error_messages", resource: resource %>
+  <%
+=begin%>
+ <%= render "owners/shared/error_messages", resource: resource %> 
+<%
+=end%>
 
   <div class="field">
     <%= f.label :name, "名前" %><br />
@@ -15,13 +19,17 @@
 
   <div class="field">
     <%= f.label :shop_name, "店舗名" %><br />
-    <%= f.text_field :shop_name, autofocus: true, autocomplete: "shop_name" %>
+    <%= f.text_field :shop_name, autocomplete: "shop_name" %>
   </div>
 
-  <div class="field">
+  <%
+=begin%>
+ <div class="field">
     <%= f.label :email, "メールアドレス" %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+    <%= f.email_field :email, autocomplete: "email" %>
+  </div> 
+<%
+=end%>
 
   <div class="field">
     <%= f.label :password, "パスワード" %>
@@ -39,6 +47,7 @@
   <div class="actions">
     <%= f.submit "新規登録" %>
   </div>
+  
 <% end %>
 
 <%= render "owners/shared/links" %>
