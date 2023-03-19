@@ -3,7 +3,7 @@
 class Owners::RegistrationsController < Devise::RegistrationsController
 
   def after_sign_up_path_for(resource)
-    owner_path(resource)
+    owners_top_path(resource)
   end
 
 

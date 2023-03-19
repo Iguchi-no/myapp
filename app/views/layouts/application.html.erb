@@ -16,25 +16,19 @@
       <i class="fa-solid fa-truck fa-lg"></i>
       <h1 class="title">K-Carシフト</h1>
     </div>
-    <p>
-      <% if owner_signed_in? %>
-        Logged in as <strong><%= current_owner.email %></strong>.
-        <%= link_to 'Edit profile', edit_owner_registration_path %> |
-        <%= link_to 'Logout', destroy_owner_session_path, method: :delete %>
-      <% else %>
-        <%= link_to 'Sign up', new_owner_registration_path %> |
-        <%= link_to 'Login', new_owner_session_path %>
-      <% end %>
-    </p>
-    <hr>
+    <% if owner_signed_in? %>
+      <div class="section-icon owner-section-icon">
+        <i class="fa-solid fa-user"></i>
+        <h5>オーナーログイン中</h5>
+      </div>
+    <% end %>
   </header>
-
+  <hr>
   <body>
     <%= yield %>
   </body>
-
+  <hr>
   <footer>
-    <hr>
     <p>©2023 SotaIguchi</p>
   </footer>
 

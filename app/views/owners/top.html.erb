@@ -1,0 +1,29 @@
+<div class="owner-top">
+  <p>
+    <% if owner_signed_in? %>
+      <strong><%= current_owner.shop_name %></strong>さん
+      <%= link_to 'ログアウト', destroy_owner_session_path, method: :delete %>
+    <% else %>
+      <%= link_to 'Sign up', new_owner_registration_path %> |
+      <%= link_to 'Login', new_owner_session_path %>
+    <% end %>
+  </p>
+
+  <div class="employee-list">
+    <div class="list-title">
+      <h4>従業員リスト</h4>
+      <i class="fa-solid fa-circle-plus"></i>
+    </div>
+
+    
+
+  </div>
+
+  <div class="working-day-list">
+    <div class="list-title">
+      <h4>営業日</h4>
+      <i class="fa-solid fa-circle-plus"></i>
+    </div>
+  </div>
+</div>
+

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'owners/top'
   devise_for :employees
   devise_for :owners, controllers: {
     sessions: 'owners/sessions',
