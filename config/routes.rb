@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :schedules
   get 'owners/top'
   devise_for :employees
   devise_for :owners, controllers: {
