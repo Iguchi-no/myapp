@@ -151,7 +151,8 @@ body p {
 
 /* 新規登録画面 -------------------------------------- */
 .resister-new {
-  width: 100%;
+  width: auto;
+  margin: 0 auto;
 }
 
 .resister-new h4 {
@@ -159,16 +160,48 @@ body p {
 }
 
 .resister-new .field {
-  width: 300px;
-  margin: 0 auto;
-  font-size: 12px;
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+  /* font-size: 12px; */
 }
 
 .resister-new .actions {
-  width: 300px;
-  margin: 0 auto;
+  width: max-content;
+  margin: 30px auto;
+}
+
+.other-sessions {
+  text-align: center;
+  font-size: 12px;
+  color: black;
+  text-decoration: none;
 }
 /* 新規登録画面 -------------------------------------- */
+
+/* ログイン画面 -------------------------------------- */
+.sessions-new {
+  width: auto;
+  margin: 0 auto;
+}
+
+.sessions-new h4 {
+  text-align: center;
+}
+
+.sessions-new .field {
+  text-align: center;
+  width: 200px;
+  margin: 20px auto;
+  /* font-size: 12px; */
+}
+
+.sessions-new .actions {
+  width: max-content;
+  margin: 30px auto;
+}
+/* ログイン画面 -------------------------------------- */
+
 
 
 /* オーナー画面 -------------------------------------- */

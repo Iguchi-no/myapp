@@ -1,4 +1,9 @@
 <div class="owner-top">
+  <div class="section-icon owner-section-icon">
+    <i class="fa-solid fa-user"></i>
+    <h5>オーナーログイン中</h5>
+  </div>
+  
   <p>
     <% if owner_signed_in? %>
       <strong><%= current_owner.shop_name %></strong>さん
@@ -15,7 +20,7 @@
       <i class="fa-solid fa-circle-plus"></i>
     </div>
 
-    
+
 
   </div>
 
