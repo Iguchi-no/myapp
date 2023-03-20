@@ -20,7 +20,7 @@
 
       <% if owner_signed_in? %>
         <div class="is-login">
-          <strong><%= current_owner.shop_name %></strong>さん
+          <strong><%= current_owner.name %></strong>さん
           <%= link_to 'ログアウト', destroy_owner_session_path, method: :delete %>
         </div>
       <% end %>
@@ -33,7 +33,7 @@
         <h5>オーナーログイン中</h5>
       </div>
     <% end %>
-    
+
     <%= yield %>
 
     <footer>
