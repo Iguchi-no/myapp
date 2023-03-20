@@ -3,6 +3,7 @@ class OwnersController < ApplicationController
 
   def top
     @schedules = Schedule.all
+    @employees = Employee.all
   end
 
 end

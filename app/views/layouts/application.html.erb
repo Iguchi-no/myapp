@@ -11,19 +11,36 @@
     <link href="https://use.fontawesome.com/releases/v6.3.0/css/all.css" rel="stylesheet"> 
   </head>
 
-  <header>
-    <div class="title-icon">
-      <i class="fa-solid fa-truck fa-lg"></i>
-      <h1 class="title">K-Carシフト</h1>
-    </div>
-  </header>
-  <hr>
   <body>
+    <header>
+      <div class="title-icon">
+        <i class="fa-solid fa-truck fa-lg"></i>
+        <h1 class="title">K-Carシフト</h1>
+      </div>
+
+      <% if owner_signed_in? %>
+        <div class="is-login">
+          <strong><%= current_owner.shop_name %></strong>さん
+          <%= link_to 'ログアウト', destroy_owner_session_path, method: :delete %>
+        </div>
+      <% end %>
+    </header>
+    <hr>
+
+    <% if owner_signed_in? %>
+      <div class="section-icon owner-section-icon">
+        <i class="fa-solid fa-user"></i>
+        <h5>オーナーログイン中</h5>
+      </div>
+    <% end %>
+    
     <%= yield %>
+
+    <footer>
+      <hr>
+      <p>©2023 SotaIguchi</p>
+    </footer>
+
   </body>
-  <hr>
-  <footer>
-    <p>©2023 SotaIguchi</p>
-  </footer>
 
 </html>

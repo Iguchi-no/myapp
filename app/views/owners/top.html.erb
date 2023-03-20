@@ -1,18 +1,4 @@
 <div class="owner-top">
-  <div class="section-icon owner-section-icon">
-    <i class="fa-solid fa-user"></i>
-    <h5>オーナーログイン中</h5>
-  </div>
-
-  <p>
-    <% if owner_signed_in? %>
-      <strong><%= current_owner.shop_name %></strong>さん
-      <%= link_to 'ログアウト', destroy_owner_session_path, method: :delete %>
-    <% else %>
-      <%= link_to 'Sign up', new_owner_registration_path %> |
-      <%= link_to 'Login', new_owner_session_path %>
-    <% end %>
-  </p>
 
   <div class="employee-list">
     <div class="list-title">
@@ -22,8 +8,21 @@
       <% end %>
     </div>
 
-
-
+    <div id="employees">
+      <%
+=begin%>
+ <% @employees.each do |employee| %>
+        <div class="employee-row">
+          <%= employee.name %>
+        </div>
+      <% end %> 
+<%
+=end%>
+      <caption>※以下サンプル従業員です</caption>
+      <li>森田</li>
+      <li>岡田</li>
+      <li>井ノ原</li>
+    </div>
   </div>
 
   <div class="working-day-list">

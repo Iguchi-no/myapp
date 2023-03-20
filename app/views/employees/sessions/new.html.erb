@@ -1,4 +1,12 @@
-<h2>Log in</h2>
+<div class="resister-new">
+  <h4>従業員 ログイン</h4>
+
+  <p>従業員ログイン画面</p>
+  <p>※まだ未実装です</p>
+</div>
+<%
+=begin%>
+ <h2>Log in</h2>
 
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
@@ -23,4 +31,6 @@
   </div>
 <% end %>
 
-<%= render "employees/shared/links" %>
+<%= render "employees/shared/links" %> 
+<%
+=end%>

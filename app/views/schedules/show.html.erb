@@ -1,10 +1,16 @@
-<p style="color: green"><%= notice %></p>
+<div class="schedule-session">
+  <%
+=begin%>
+ <p style="color: green"><%= notice %></p> 
+<%
+=end%>
 
-<%= render @schedule %>
+  <%= render @schedule %>
 
-<div>
-  <%= link_to "更新", edit_schedule_path(@schedule) %> |
-  <%= link_to "戻る", owners_top_path %>
+  <div>
+    <%= link_to "更新", edit_schedule_path(@schedule) %> |
+    <%= link_to "戻る", owners_top_path %>
 
-  <%= button_to "削除", @schedule, method: :delete %>
+    <%= button_to "削除", @schedule, method: :delete %>
+  </div>
 </div>

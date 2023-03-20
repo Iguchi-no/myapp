@@ -14,7 +14,7 @@
  *= require_self
  */
 
-header, body, footer {
+body {
   width: 360px;
   margin: 0 auto;
 }
@@ -22,17 +22,25 @@ header, body, footer {
 /* header */
 header {
   display: flex;
+  height: 60px;
 }
 
 .title-icon {
-  margin-left: 30px;
-  margin-top: 20px;
+  margin-left: 20px;
+  margin-top: auto;
+  margin-right: auto;
 }
 
 .title {
   display: inline;
   font-size: 18px;
   font-weight: bold;
+}
+
+.is-login {
+  font-size: 12px;
+  margin-top: auto;
+  margin-right: 20px;
 }
 
 /* 説明文 ---------------------------------------------- */
@@ -153,14 +161,10 @@ body p {
 .resister-new {
   width: auto;
   margin: 0 auto;
-}
-
-.resister-new h4 {
   text-align: center;
 }
 
 .resister-new .field {
-  text-align: center;
   width: 200px;
   margin: 20px auto;
   /* font-size: 12px; */
@@ -183,14 +187,10 @@ body p {
 .sessions-new {
   width: auto;
   margin: 0 auto;
-}
-
-.sessions-new h4 {
   text-align: center;
 }
 
 .sessions-new .field {
-  text-align: center;
   width: 200px;
   margin: 20px auto;
   /* font-size: 12px; */
@@ -239,10 +239,14 @@ body p {
   display: none;
 }
 
+.schedule-session {
+  text-align: center;
+}
+
 /* オーナー画面 -------------------------------------- */
 
 /* footer */
 footer {
-  margin-top: 40px;
+  margin-top: 100px;
   text-align: center;
 }
