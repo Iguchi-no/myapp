@@ -221,9 +221,22 @@ body p {
   margin-right: auto;
 }
 
-.fa-circle-plus {
+.listtitle .fa-circle-plus {
   margin: auto 0;
   color: blue;
+}
+
+.schedule-row {
+  display: flex;
+  width: 100%;
+}
+
+.schedule-list {
+  margin-right: auto;
+}
+
+.owner-id-form {
+  display: none;
 }
 
 /* オーナー画面 -------------------------------------- */

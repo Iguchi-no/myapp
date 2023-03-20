@@ -1,25 +1,31 @@
-<div id="<%= dom_id schedule %>">
+<div id="<%= dom_id schedule %>" class="schedule-list" >
   <p>
-    <strong>Place:</strong>
+    <strong>場所:</strong>
     <%= schedule.place %>
   </p>
 
   <p>
-    <strong>Date:</strong>
-    <%= schedule.date %>
+    <strong>日時:</strong>
+    <%= schedule.date %> <%= schedule.start_time %> <%= schedule.end_time %>
   </p>
 
-  <p>
-    <strong>Start time:</strong>
+  <%
+=begin%>
+ <p>
+    <strong>開始時間:</strong>
     <%= schedule.start_time %>
   </p>
 
   <p>
-    <strong>End time:</strong>
+    <strong>終了時間:</strong>
     <%= schedule.end_time %>
-  </p>
+  </p> 
+<%
+=end%>
 
-  <p>
+  <%
+=begin%>
+ <p>
     <strong>Memo:</strong>
     <%= schedule.memo %>
   </p>
@@ -27,6 +33,8 @@
   <p>
     <strong>Owner:</strong>
     <%= schedule.owner_id %>
-  </p>
+  </p> 
+<%
+=end%>
 
 </div>

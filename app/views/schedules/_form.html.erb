@@ -12,34 +12,34 @@
   <% end %>
 
   <div>
-    <%= form.label :place, style: "display: block" %>
+    <%= form.label :place, "場所", style: "display: block" %>
     <%= form.text_field :place %>
   </div>
 
   <div>
-    <%= form.label :date, style: "display: block" %>
+    <%= form.label :date, "日付", style: "display: block" %>
     <%= form.date_field :date %>
   </div>
 
   <div>
-    <%= form.label :start_time, style: "display: block" %>
+    <%= form.label :start_time, "開始時間", style: "display: block" %>
     <%= form.time_field :start_time %>
   </div>
 
   <div>
-    <%= form.label :end_time, style: "display: block" %>
+    <%= form.label :end_time, "終了時間", style: "display: block" %>
     <%= form.time_field :end_time %>
   </div>
 
   <div>
-    <%= form.label :memo, style: "display: block" %>
+    <%= form.label :memo, "メモ", style: "display: block" %>
     <%= form.text_area :memo %>
   </div>
 
-  <div>
-    <%= form.label :owner_id, style: "display: block" %>
-    <%= form.text_field :owner_id %>
-  </div>
+  <div class="owner-id-form">
+    <%= form.label :owner_id, "オーナーID", style: "display: block" %>
+    <%= form.text_field :owner_id, value: current_owner.owner_id %>
+  </div> 
 
   <div>
     <%= form.submit %>
